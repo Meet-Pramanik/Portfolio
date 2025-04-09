@@ -35,35 +35,6 @@ Welcome to my interactive and responsive **portfolio website**! This project sho
 
 ---
 
-### 📁 Folder Structure
-```
-📁 portfolio-website/
-├── index.html
-├── index.css
-├── index.js
-├── bootstrap/
-├── images/
-```
-
----
-
-### ⚙️ How to Use
-1. Clone the repo  
-   `git clone https://github.com/Meet-Pramanik/Portfolio.git`
-
-2. Open `index.html` in your browser  
-3. (Optional) Deploy via GitHub Pages / Netlify / Vercel
-
----
-
-### 🧠 Customize This Portfolio
-- Change name, greeting, and skills in `index.html`
-- Replace project images and links
-- Add real social handles in the Contact section
-- Set your own EmailJS `service_id`, `template_id`, and public key
-
----
-
 ### 📫 Contact
 - GitHub: [@Meet-Pramanik](https://github.com/Meet-Pramanik)  
 
