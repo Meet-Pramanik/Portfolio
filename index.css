@@ -1,0 +1,92 @@
+html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #0f0f0f;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+#home {
+padding-top: 80px; 
+min-height: 100vh;
+}
+
+
+.skill-card {
+    backdrop-filter: blur(5px);
+
+    transform: scale(0.8);
+    transition: all 0.4s ease;
+    border-radius: 12px;
+
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.skill-card i {
+    font-size: 10rem;
+    transition: all 0.4s ease;
+}
+
+.skill-card .card-title,
+.skill-card .card-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1);
+}
+
+.skill-card:hover i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.skill-card:hover .card-title,
+.skill-card:hover .card-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#skills {
+
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    width: 95%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+#contact input,
+#contact textarea {
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    box-shadow: 0 0 10px #0dcaf0;
+    outline: none;
+}
+
+.heading-glow {
+    text-shadow: 0 0 10px #0dcaf0;
+}
+.custom-navbar {
+background-color: rgba(15, 15, 15, 0.8);    
+backdrop-filter: blur(8px);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+transition: all 0.3s ease-in-out;
+}
+::placeholder {
+    color: #ccc !important; 
+    opacity: 1;
+}
