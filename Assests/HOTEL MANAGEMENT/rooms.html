@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms - Hotel Grand</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            scroll-behavior: smooth;
+            background: #f8f9fa;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            z-index: 1000;
+            align-items:center ;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .room-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding-top: 60px;
+        }
+
+        .room-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .room-section p {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        .prev:hover, .next:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .book-now {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .book-now:hover {
+            background: #218838;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Hotel Grand</h1>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="booking.html">Book</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+>
+    <div class="room-section">
+        <h2>Single Room</h2>
+        <p>Cozy and comfortable for solo travelers. Enjoy a peaceful stay with all modern amenities.</p>
+        <p class="price">$500/night</p>
+        
+        <div class="slider-container">
+            <div class="slides" id="singleSlides">
+                <img src="download.jpg" alt="Single Room 1">
+                <img src="download (2).jpg" alt="Single Room 2">
+                <img src="download (1).jpg" alt="Single Room 3">
+            </div>
+            <button class="prev" onclick="prevSlide('singleSlides')">&#10094;</button>
+            <button class="next" onclick="nextSlide('singleSlides')">&#10095;</button>
+        </div>
+
+        <a href="booking.html" class="book-now">Book Now</a>
+    </div>
+
+    <div class="room-section">
+        <h2>Double Room</h2>
+        <p>Perfect for couples or friends. Spacious and well-equipped for a relaxing experience.</p>
+        <p class="price">$1200/night</p>
+
+        <div class="slider-container">
+            <div class="slides" id="doubleSlides">
+                <img src="download (3)d.jpg" alt="Double Room 1">
+                <img src="dq.jpg" alt="Double Room 2">
+                <img src="dw.jpg" alt="Double Room 3">
+            </div>
+            <button class="prev" onclick="prevSlide('doubleSlides')">&#10094;</button>
+            <button class="next" onclick="nextSlide('doubleSlides')">&#10095;</button>
+        </div>
+
+        <a href="booking.html" class="book-now">Book Now</a>
+    </div>
+
+
+    <div class="room-section">
+        <h2>Luxury Suite</h2>
+        <p>Experience ultimate luxury with a large suite, premium services, and breathtaking views.</p>
+        <p class="price">$2000/night</p>
+
+        <div class="slider-container">
+            <div class="slides" id="suiteSlides">
+                <img src="sq.jpg" alt="Suite Room 1">
+                <img src="s.jpg" alt="Suite Room 2">
+                <img src="sqw.jpg" alt="Suite Room 3">
+            </div>
+            <button class="prev" onclick="prevSlide('suiteSlides')">&#10094;</button>
+            <button class="next" onclick="nextSlide('suiteSlides')">&#10095;</button>
+        </div>
+
+        <a href="booking.html" class="book-now">Book Now</a>
+    </div>
+
+    <div class="footer">&copy; 2025 Hotel Grand</div>
+
+    <script>
+        function nextSlide(sliderId) {
+            let slider = document.getElementById(sliderId);
+            slider.appendChild(slider.firstElementChild);
+        }
+
+        function prevSlide(sliderId) {
+            let slider = document.getElementById(sliderId);
+            slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+        }
+    </script>
+
+</body>
+</html>
